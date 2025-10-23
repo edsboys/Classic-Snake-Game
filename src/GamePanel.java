@@ -272,8 +272,10 @@ public class GamePanel extends JPanel implements ActionListener {
         g.setColor(Color.WHITE);
         g.setFont(new Font("Arial", Font.PLAIN, 20));
         FontMetrics metrics3 = getFontMetrics(g.getFont());
-        g.drawString("Press R to restart", 
-                    (SCREEN_WIDTH - metrics3.stringWidth("Press R to restart")) / 2, 
+        String restartKey = KeyEvent.getKeyText(KeyEvent.VK_R);
+        String restartMessage = "Press " + restartKey + " to restart";
+        g.drawString(restartMessage,
+                    (SCREEN_WIDTH - metrics3.stringWidth(restartMessage)) / 2,
                     SCREEN_HEIGHT / 2 + 100);
     }
 
